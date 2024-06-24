@@ -35,7 +35,6 @@
 		010A56702C16E72C00D29669 /* UIAlertController.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010A566F2C16E72C00D29669 /* UIAlertController.ext.swift */; };
 		010A56732C16ECF900D29669 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010A56722C16ECF900D29669 /* AppModel.swift */; };
 		0186DF4D2C1EB06C0028C474 /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0186DF4C2C1EB06C0028C474 /* UserDataViewController.swift */; };
-		0186DF522C1ED2B00028C474 /* NoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0186DF512C1ED2B00028C474 /* NoteManager.swift */; };
 		0186DF582C1F13750028C474 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0186DF572C1F13750028C474 /* ForgetPasswordViewController.swift */; };
 		0186DF5B2C2078A70028C474 /* ForgetPasscodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0186DF5A2C2078A70028C474 /* ForgetPasscodeModel.swift */; };
 		01948AE02C1996D700F364CD /* ProfileFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01948ADF2C1996D700F364CD /* ProfileFirebaseManager.swift */; };
@@ -83,7 +82,6 @@
 		010A566F2C16E72C00D29669 /* UIAlertController.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.ext.swift; sourceTree = "<group>"; };
 		010A56722C16ECF900D29669 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		0186DF4C2C1EB06C0028C474 /* UserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
-		0186DF512C1ED2B00028C474 /* NoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteManager.swift; sourceTree = "<group>"; };
 		0186DF572C1F13750028C474 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		0186DF5A2C2078A70028C474 /* ForgetPasscodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasscodeModel.swift; sourceTree = "<group>"; };
 		01948ADF2C1996D700F364CD /* ProfileFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFirebaseManager.swift; sourceTree = "<group>"; };
@@ -321,7 +319,6 @@
 		0186DF502C1ED2A40028C474 /* Note */ = {
 			isa = PBXGroup;
 			children = (
-				0186DF512C1ED2B00028C474 /* NoteManager.swift */,
 			);
 			path = Note;
 			sourceTree = "<group>";
@@ -640,7 +637,6 @@
 				010A56642C15979100D29669 /* UIButton.ext.swift in Sources */,
 				010A56242C157B3800D29669 /* AppDelegate.swift in Sources */,
 				01948AF82C1C248A00F364CD /* Movie.swift in Sources */,
-				0186DF522C1ED2B00028C474 /* NoteManager.swift in Sources */,
 				0186DF4D2C1EB06C0028C474 /* UserDataViewController.swift in Sources */,
 				010A56262C157B3800D29669 /* SceneDelegate.swift in Sources */,
 				01E501AA2C297A8B0081A467 /* UserDataManager.swift in Sources */,

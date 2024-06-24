@@ -48,15 +48,34 @@ class UserDataManager {
             }
     }
     
-    func setHBUser(complition: @escaping (Date) -> Void) {
+    func setHBUser(hbDate: Date) {
         guard let uid = SingltonModel.shared.userId else {return}
         
         Firestore.firestore()
             .collection("users")
             .document(uid)
-            .updateData(["HB":Date()])
+            .updateData(["HB": hbDate])
     }
     
+    
+    func getHBUser(complition: @escaping (Date) -> Void){
+        guard let uid = SingltonModel.shared.userId else {return}
+        
+        
+        Firestore.firestore()
+            .collection("users")
+            .document(uid)
+            .getDocument { snap, error in
+                guard error == nil else {
+                    print(error!.localizedDescription)
+                    return
+                }
+                let nameString = snap?["HB"] as? Date
+                complition(nameString ?? Date())
+            }
+        
+    }
+        
     private func uploadOneImage(image: Data?, storageLink: StorageReference, complition: @escaping (Result<URL, Error>) -> Void) {
         
         let mateData = StorageMetadata()

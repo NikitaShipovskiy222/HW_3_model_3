@@ -42,14 +42,17 @@ final class UserDataViewController: UIViewController {
     
     lazy var actionSave = UIAction { [weak self] _ in
         guard let self = self else {return}
-        print(self.datePicker.date)
-        userData.setHBUser { [weak self] hb in
-            self?.datePicker.date = hb
-        }
+        userData.setHBUser(hbDate: self.datePicker.date)
+        labelUserHB.text = datePicker.date.formatted()
+        view.addSubview(labelUserHB)
     }
     
     
-    private lazy var labelHB = UILabel.makeLabel(text: self.datePicker.date.description, textColor: .main)
+    private lazy var labelUserHB: UILabel = {
+     $0.font = UIFont.systemFont(ofSize: 13, weight: .bold)
+     $0.textColor = .main
+        return $0
+    }(UILabel(frame: CGRect(x: yourHBProfile.frame.width + 50, y: 590, width: view.frame.width - 50, height: 20)))
         
     private lazy var labelEmailUser: UILabel = {
         .config(view: $0) { label in
@@ -97,11 +100,11 @@ final class UserDataViewController: UIViewController {
         
         view.backgroundColor = .black
         navigationController?.navigationBar.tintColor = .main
-        view.addAllViews(yourData, yourName, yourEmail, yourImageProfile, yourHBProfile, labelEmailUser, labelUserName, userImageView, datePicker, saveButton, labelHB)
+        view.addAllViews(yourData, yourName, yourEmail, yourImageProfile, yourHBProfile, labelEmailUser, labelUserName, userImageView, datePicker, saveButton)
         allConstraint()
         getUserEmail() 
         getUserName()
-        
+
         }
     
 
@@ -156,12 +159,9 @@ final class UserDataViewController: UIViewController {
             saveButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
             saveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
             
-            
-            
-            labelHB.topAnchor.constraint(equalTo: saveButton.bottomAnchor, constant: 20),
-            labelHB.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
-            labelHB.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100),
-            
+
+
+
             
         ])
     }
